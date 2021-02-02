@@ -1,42 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:weightSum="1"
-    android:orientation="horizontal">
-    <ImageView
-        android:id="@+id/stop"
-        android:layout_width="wrap_content"
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:src="@mipmap/stop_round" />
-    <ImageView
-        android:id="@+id/skip_previous"
-        android:layout_width="wrap_content"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/present_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="2dp"
+            android:text="00:00"
+            android:textSize="15sp"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <SeekBar
+                android:id="@+id/my_seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/seekbar_btn"
+                android:progressDrawable="@drawable/progress_bar"
+                android:maxHeight="4dp"
+                android:minHeight="4dp"
+                android:splitTrack="false"
+                android:background="@null"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/full_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="2dp"
+            android:text="00:00"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="80dp"
-        android:src="@mipmap/skip_previous_round" />
+        android:weightSum="1"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/Mode"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/circle_list" />
+        <ImageView
+            android:id="@+id/skip_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="80dp"
+            android:src="@mipmap/skip_previous_round" />
 
-    <ImageView
-        android:id="@+id/start_pause"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:src="@mipmap/pause_round" />
+        <ImageView
+            android:id="@+id/start_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/pause_round" />
 
-    <ImageView
-        android:id="@+id/skip_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="80dp"
-        android:src="@mipmap/skip_next_round" />
-    <ImageView
-        android:id="@+id/list_to_play"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:src="@mipmap/list_to_play_round" />
+        <ImageView
+            android:id="@+id/skip_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="80dp"
+            android:src="@mipmap/skip_next_round" />
+        <ImageView
+            android:id="@+id/list_to_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/list_to_play_round" />
 
-</RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

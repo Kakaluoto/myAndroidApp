@@ -10,6 +10,7 @@ buildscript {
 
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
         google()
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.2'
@@ -29,6 +30,7 @@ allprojects {
 
         maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
         google()
+        jcenter()
     }
 }
 

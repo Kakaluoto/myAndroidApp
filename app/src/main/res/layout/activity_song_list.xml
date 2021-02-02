@@ -18,5 +18,5 @@
     </LinearLayout>
 
 
-    <include layout="@layout/play_controller"/>
+    <include layout="@layout/play_controller" />
 </LinearLayout>

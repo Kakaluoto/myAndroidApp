@@ -1,4 +1,4 @@
-package hy.work1;
+package hy.myhttptest;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -21,9 +21,10 @@ import java.util.List;
 
 public class SongAdapter extends ArrayAdapter<Song> {
     private int resourceId;
+
     //private MediaMetadataRetriever mediaMetadataRetriever = new MediaMetadataRetriever();
-    public SongAdapter(Context context, int textViewResourceId, List<Song> objects){
-        super(context,textViewResourceId,objects);
+    public SongAdapter(Context context, int textViewResourceId, List<Song> objects) {
+        super(context, textViewResourceId, objects);
         resourceId = textViewResourceId;
     }
 
@@ -34,17 +35,17 @@ public class SongAdapter extends ArrayAdapter<Song> {
         View view;
         ViewHolder viewHolder;
         //Log.d("成功进入getView","Into_getView");
-        if(convertView == null){
-            view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+        if (convertView == null) {
+            view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
             viewHolder = new ViewHolder();
             //viewHolder.addr = song.getAddress();
             viewHolder.picture = (ImageView) view.findViewById(R.id.picture);
-            viewHolder.music = (TextView)view.findViewById(R.id.music);
-            viewHolder.singer = (TextView)view.findViewById(R.id.singer);
+            viewHolder.music = (TextView) view.findViewById(R.id.music);
+            viewHolder.singer = (TextView) view.findViewById(R.id.singer);
             view.setTag(viewHolder);
-        }else {
+        } else {
             view = convertView;
-            viewHolder = (ViewHolder)view.getTag();
+            viewHolder = (ViewHolder) view.getTag();
         }
         //setloadCover(viewHolder.addr,viewHolder.picture);
         viewHolder.picture.setImageResource(song.getImageId());
@@ -60,7 +61,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         Bitmap bitmap = BitmapFactory.decodeByteArray(cover, 0, cover.length);
         image.setImageBitmap(bitmap);    }*/
 
-    class ViewHolder{
+    class ViewHolder {
         ImageView picture;
         TextView music;
         TextView singer;

@@ -1,4 +1,4 @@
-package hy.work1;
+package hy.myhttptest;
 
 import org.junit.Test;
 
