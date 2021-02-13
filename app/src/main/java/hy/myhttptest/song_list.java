@@ -182,7 +182,6 @@ public class song_list extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.list_to_play:
                 Intent toHttpTest = new Intent(song_list.this, httptest.class);
-                toHttpTest.putExtra("msg", "hello world");
                 startActivity(toHttpTest);
                 break;
             default:

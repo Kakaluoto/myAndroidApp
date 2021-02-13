@@ -8,16 +8,150 @@
     <include layout="@layout/title" />
 
     <TextView
-        android:id="@+id/httpPost"
+        android:id="@+id/loginStatus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:gravity="center"
+        android:text="未登录" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/webAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入用户名"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/webPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/webAccount"
+            android:layout_marginTop="15dip"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/reset_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="50dp"
+            android:text="清除重填"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/verify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:text="登录"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/current_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="现在的心情"></TextView>
+
+    <RadioGroup
+        android:id="@+id/mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/happy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="true"
+            android:gravity="center"
+            android:text="开心" />
+
+        <RadioButton
+            android:id="@+id/sad"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:text="难过" />
+
+        <RadioButton
+            android:id="@+id/curious"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:text="好奇" />
+
+        <RadioButton
+            android:id="@+id/daze"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:text="发呆" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/mood_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:text="心情留言板"></TextView>
+
+    <EditText
+        android:id="@+id/msg_to_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dip"
+            android:hint="你的昵称"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/postCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nickname"
+            android:hint="张贴/删除码"
+            android:inputType="numberPassword"
+            android:maxLines="1"
+            android:textSize="15sp" />
+    </RelativeLayout>
 
     <Button
-        android:id="@+id/send_request"
+        android:id="@+id/upload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Send Request" />
+        android:text="提交" />
+
 
     <!--        <WebView-->
     <!--            android:id="@+id/web_view"-->
